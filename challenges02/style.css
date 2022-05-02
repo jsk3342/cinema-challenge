@@ -11,6 +11,11 @@ body {
     background-color: #111;
 }
 
+.wrap {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
 .header {
     z-index: -10;
     position: relative;
@@ -18,7 +23,8 @@ body {
 
 .header img {
     width: 100%;
-    margin-bottom: -100px;
+    margin-bottom: -110px;   
+    -webkit-mask-image: linear-gradient(to top, transparent 1%, black 30%);
 }
 
 .cinema-detail {
@@ -30,7 +36,7 @@ body {
 .new {
     background-color: orangered;
     display: inline-block;
-    padding: 3px 8px 3px 10px;
+    padding: 5px 12px 5px 15px;
     letter-spacing: 3px;
     font-size: 8px;
     border-radius: 3px;
@@ -39,7 +45,7 @@ body {
 
 .cinema-detail-title {
     margin: 8px 0;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .detail-wrap {
@@ -52,12 +58,15 @@ body {
 
 .detail-subtitle {
     padding: 0 20px;
-    width: 80%;
+    width: 75%;
+    font-size: 0.8em;
 }
 
 .detail-information {
     padding: 0 20px;
-    width: 20%s;
+    width: 25%;
+    margin-top: -150px;
+    font-size: 0.8em;
 }
 
 .detail-information p {
@@ -72,4 +81,66 @@ body {
     line-height: 1;
     margin: 2px;
     border-radius: 3px;
+}
+
+.detail-information .casts-items {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid black; 
+}
+
+.detail-information .casts-items + .casts-items {
+    margin-left: -20px;
+}
+
+.star-wrap {
+    width: 240px;
+    height: 96px;
+}
+
+
+/* 별 나중에 처리하고 일단 진행 */
+.star {
+    height: 100%;
+    background: url(./images/star.png);
+    background-size: 240px 96px;
+}
+
+
+@media (max-width:760px) {
+    .detail-wrap {
+        flex-direction: column;
+    }
+
+    .new {
+        background-color: orangered;
+        display: inline-block;
+        padding: 7px 14px 7px 17px;
+        letter-spacing: 3px;
+        font-size: 10px;
+        border-radius: 3px;
+        border-bottom: 3px solid rgb(170, 45, 0);
+    }
+
+    .cinema-detail-title {
+        font-size: 3rem;
+    }
+
+    .detail-subtitle {
+        width: initial;
+        font-size: 0.9em;
+    }
+
+    .detail-information {
+        width: initial;
+        margin: 20px 0;
+    }
+
+
+
+
+
+
+
 }
